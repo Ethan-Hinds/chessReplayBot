@@ -138,7 +138,8 @@ client.on("message", async function(message) {
         let numGames = response.body.games.length;
         whitePlayer = response.body.games[numGames-1].pgn.match(/\[White\s"(.*?)"\]/)[1];
         blackPlayer = response.body.games[numGames-1].pgn.match(/\[Black\s"(.*?)"\]/)[1];
-        userSide = whitePlayer == username ? "white" : "black";
+        userSide = whitePlayer.toLowerCase() == username.toLowerCase() ? "white" : "black";
+        console.log(whitePlayer, blackPlayer, userSide)
         let moves = response.body.games[numGames-1].pgn.split(/Link.*?]/)[1].replace(/{.*?\.\s/g, "").replace(/{.*/, "").slice(5).split(" ");
         startMove = Math.min(Math.max(parseInt(startMove), 1), moves.length/2);
         if (!endMove) {
