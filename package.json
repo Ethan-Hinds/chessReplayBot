@@ -1,0 +1,20 @@
+{
+  "name": "chesscombot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Ethan Hinds",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "chess-web-api": "^1.0.17",
+    "chess.js": "^0.11.0",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "gif-encoder-2": "^1.0.5"
+  }
+}
