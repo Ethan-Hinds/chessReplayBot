@@ -95,7 +95,7 @@ client.on("message", async function(message) {
                     return;
                 }
                 delay = parseFloat(args[1]) * 1000;
-                message.channel.send("Delay set to " + delay/1000 + " seconds");
+                //message.channel.send("Delay set to " + delay/1000 + " seconds");
                 return;
             }
             break;
@@ -132,7 +132,7 @@ client.on("message", async function(message) {
     let board = new Board();
     chess.reset();
 
-    message.channel.send("Please wait a moment.");
+    //message.channel.send("Please wait a moment.");
 
     chessAPI.getPlayerCompleteMonthlyArchives(username, year, month).then(async function(response) {
         let numGames = response.body.games.length;
